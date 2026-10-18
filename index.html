@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive card details form" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style-css.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="card-form d-flex">
+      <div class="inside-img-background position-relative">
+        <!-- <img class="back-img" src="images/bg-main-desktop.png" alt="" /> -->
+        <!-- ========== card --- front ======= -->
+        <div class="card-front position-absolute">
+          <img class="img-card-front" src="images/bg-card-front.png" alt="" />
+          <div class="circle-white position-absolute"></div>
+          <div class="circle-white-2 position-absolute"></div>
+          <div class="long-numbers position-absolute text-light">
+            0000 0000 0000 0000
+          </div>
+          <div
+            class="name-date d-flex justify-content-between align-items-center position-absolute"
+          >
+            <div class="name-card">Jane Appleseed</div>
+            <div class="date-card">
+              <span class="place-month">00</span> /
+              <span class="place-year">00</span>
+            </div>
+          </div>
+        </div>
+        <!-- =========== card --- back ======= -->
+        <div class="card-back position-absolute">
+          <img class="img-card-back" src="images/bg-card-back.png" alt="" />
+          <div class="cvc-numbers position-absolute">000</div>
+        </div>
+      </div>
+      <!-- right-side -->
+
+      <div class="inform-data">
+        <div class="inputs-user show-page">
+          <!-- ============ CARDHOLDER NAME ========== -->
+          <div class="username-input mb-4">
+            <div class="name-input-card mb-2">Cardholder Name</div>
+            <input
+              class="card-name same"
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+              required
+            />
+            <div class="error-num hide">Can't be blank</div>
+          </div>
+          <!-- ========= CARD NUMBERS =========== -->
+          <div class="numbers-input mb-4">
+            <div class="name-input-card mb-2">Card Number</div>
+            <input
+              class="numbers-card same"
+              type="text"
+              placeholder="e.g. 1234 5678 9123 0000"
+              required
+            />
+            <div class="error-num hide">Can't be blank</div>
+
+            <div class="error-length disppear">Wrong format, numbers only</div>
+          </div>
+          <!-- ========= EXP. DATE[MM/YY]  CVC ===== -->
+          <div class="date-cvc d-flex gap-4 mb-4">
+            <div class="exp-date">
+              <div class="exp-date mb-2">Exp. Date (MM/YY)</div>
+              <input class="date-month same" type="number" placeholder="MM" />
+              <div class="error-num hide">Can't be blank</div>
+              <input class="date-year same" type="number" placeholder="YY" />
+              <div class="error-num hide">Can't be blank</div>
+            </div>
+
+            <div class="cvc-user">
+              <div class="name-cvc mb-2">CVC</div>
+              <input
+                class="cvc-user-input same"
+                type="text"
+                placeholder="e.g. 1239"
+              />
+              <div class="error-num hide">Can't be blank</div>
+            </div>
+          </div>
+          <button class="confirm-button">Confirm</button>
+        </div>
+        <!-- ======= confirm page ====== -->
+        <div class="confirm-page hide-page">
+          <img class="" src="images/icon-complete.svg" alt="" />
+          <div class="thank-you mt-4 mb-3">THANK YOU!</div>
+          <p class="mb-4">We've added your card details</p>
+          <button class="continue-button">Continue</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
