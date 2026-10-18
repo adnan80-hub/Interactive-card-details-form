@@ -1,0 +1,326 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%);
+  --gray-200: hsl(270, 3%, 87%);
+  --gray-400: hsl(212, 12%, 71%);
+  --purple-950: hsl(278, 68%, 11%);
+  --font-size: 18px;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif !important;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+.card-form {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 990px) {
+  .card-form {
+    flex-direction: column;
+  }
+}
+.inside-img-background {
+  width: 35%;
+  height: 100%;
+  background-image: url("../images/bg-main-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 990px) {
+  .inside-img-background {
+    width: 100%;
+    height: 30%;
+    background-image: url("../images/bg-main-mobile.png");
+  }
+}
+
+.card-front,
+.card-back {
+  top: 12rem;
+  left: 25rem;
+  width: 400px;
+  height: 210px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-back {
+  top: 28rem;
+  left: 30rem;
+  box-shadow: 20px 9px 30px hsl(212deg 12% 71% / 28%);
+}
+
+.img-card-front,
+.img-card-back {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 990px) {
+  .card-front {
+    top: 9rem;
+    left: 2rem;
+    width: 300px;
+    height: unset;
+    z-index: 99;
+  }
+
+  .card-back {
+    top: 2rem;
+    left: 12rem;
+    width: 300px;
+    height: unset;
+  }
+}
+
+.circle-white {
+  left: 30px;
+  top: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+.circle-white-2 {
+  left: 85px;
+  top: 30px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+
+.long-numbers {
+  bottom: 3.5rem;
+  left: 2rem;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+.name-date {
+  width: 330px;
+  bottom: 1rem;
+  left: 2rem;
+  color: var(--white);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cvc-numbers {
+  right: 3rem;
+  top: 6rem;
+  color: var(--white);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 990px) {
+  .long-numbers {
+    font-size: 18px;
+  }
+
+  .name-date {
+    width: 250px;
+  }
+
+  .cvc-numbers {
+    right: calc(3rem - 10px);
+    top: calc(6rem - 23px);
+  }
+}
+
+/* ---- inform-data  ==================*/
+.inform-data {
+  width: 70%;
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 990px) {
+  .inform-data {
+    width: 100%;
+    padding-top: 8rem;
+  }
+}
+
+.inputs-user {
+  width: 400px;
+  flex-direction: column;
+}
+
+.name-input-card,
+.numbers-input,
+.exp-date,
+.name-cvc {
+  color: var(--purple-950);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.username-input input,
+.numbers-input input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  border: 1px solid var(--gray-400);
+  width: 100%;
+  border-radius: 8px;
+}
+
+.username-input input::placeholder,
+.numbers-input input::placeholder {
+  color: var(--gray-400);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* ==== exp date | CVC ===== */
+
+.date-cvc {
+  width: 100%;
+}
+
+.exp-date input,
+.cvc-user input {
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+.exp-date input {
+  width: 70px;
+}
+.cvc-user input {
+  padding: 7px 12px;
+}
+
+.exp-date input::placeholder,
+.cvc-user input::placeholder {
+  color: var(--gray-400);
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: var(--purple-950);
+  border-radius: 8px !important;
+  padding: 10px;
+  color: #fff;
+}
+
+.error-num,
+.error-length {
+  font-size: 12px;
+  color: red;
+  font-weight: 600;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* ========== */
+
+.disppear {
+  display: none;
+}
+
+.appear {
+  display: block;
+}
+
+/* ========== */
+
+.hide-page {
+  display: none;
+}
+
+.show-page {
+  display: flex;
+}
+
+/* ---------- Confirm page  */
+
+.confirm-page {
+  width: 400px;
+  /* display: flex; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.confirm-page img {
+  width: 70px;
+}
+
+.confirm-page .thank-you {
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--purple-950);
+  letter-spacing: 2px;
+}
+
+.confirm-page p {
+  color: var(--gray-400);
+  font-weight: 500;
+  font-size: 16px;
+}
+/* <!-- # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+
+## Colors
+
+### Primary
+
+- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+- Red 400 (input errors): hsl(0, 100%, 66%)
+
+### Neutral
+
+- White: hsl(0, 100%, 100%)
+- Gray 200: hsl(270, 3%, 87%)
+- Gray 400: hsl(212, 12%, 71%)
+- Purple 950: hsl(278, 68%, 11%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+- Family: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
+- Weights: 500
+
+> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma. --> */
