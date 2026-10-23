@@ -26,8 +26,8 @@ button_confirm.onclick = function () {
     }
   });
 
-  let validNumbers = /^[0-9]{16}$/.test(numberInput.value);
-  let validCvc = /^[0-9]{3}$/.test(cvcInput.value);
+  const validNumbers = /^[0-9]{16}$/.test(numberInput.value);
+  const validCvc = /^[0-9]{3}$/.test(cvcInput.value);
   if (numberInput.value === "") {
     error_length.classList.replace("appear", "disppear");
   } else if (validNumbers && validCvc) {
@@ -62,14 +62,6 @@ button_confirm.onclick = function () {
     numberInput.style.cssText = "border-color: red;";
     cvcInput.style.cssText = "border-color: red;";
   }
-
-  // if (validCvc) {
-  //   cvc_numbers.textContent = "";
-  //   cvc_numbers.textContent += `${cvcInput.value}`;
-  //   cvcInput.style.cssText = "border-color: var(--gray-400);";
-  // } else {
-  //   cvcInput.style.cssText = "border-color: red;";
-  // }
 };
 
 button_continue.onclick = function () {
@@ -86,13 +78,3 @@ button_continue.onclick = function () {
   dateYear.value = "";
   cvcInput.value = "";
 };
-
-let record = {};
-
-record["10"] = "ten";
-record["2"] = "two";
-record["01"] = "leading";
-record["name"] = "Ada";
-record["1"] = "one";
-
-console.log(Object.keys(record));
